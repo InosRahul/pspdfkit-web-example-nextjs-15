@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "update-web-assets": "./scripts/copy-pspdfkit.sh",
     "prepare": "pnpm run update-web-assets",
+    "update-web-assets": "scripts/update-web-assets.sh",
     "predev": "pnpm run update-web-assets",
     "dev": "next dev",
     "prebuild": "pnpm run update-web-assets",
