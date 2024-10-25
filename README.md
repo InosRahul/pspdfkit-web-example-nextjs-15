@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PSPDFKit with NextJS v15 + Local Hosting Web SDK Assets
 
-Below are the steps to set up and run the project locally.
+#### This project demonstrates how to integrate PSPDFKit with a Next.js v15 application and locally host the Web SDK assets. Hosting the assets locally can improve load times, reduce dependency on external servers, and allow for a more controlled deployment environment.
 
 ## Prerequisites
 
@@ -25,30 +25,29 @@ Clone the project repository to your local machine:
 ### 2. Install Dependencies
 
 ```bash
-  yarn install
+  pnpm install
 ```
 
-### 3. Copy the PSPDFKit for Web library assets to the static directory
-
-```bash
-    cp -R ./node_modules/pspdfkit/dist/pspdfkit-lib static/pspdfkit-lib
-```
+> Note: Usually you have to copy the web assets in your static files folder. In this project our `update-web-assets`
+> script is handling this part for you. It's configured to update the web assets during the initial installation,
+> before starting your dev server and before building your project to minimise frustration.
 
 ### 4. Run the Development Server
 
 ```bash
-    yarn dev
+    pnpm dev
 ```
+
 ### 5. Build for Production
 
 ```bash
-    yarn build
+    pnpm build
 ```
 
 ### 6. Start the Production Server
 
 ```bash
-    yarn start
+    pnpm start
 ```
 
 You can now open http://localhost:3000 in your browser and enjoy!
